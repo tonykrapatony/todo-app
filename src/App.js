@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import TodosForm from './components/TodosForm';
+import TodosList from './components/TodosList';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [todos, setTodos] = useState([
+        {id: Date.now(), body: "first todo"}
+    ]);
+    const createTodo = (newTodo) => {
+      setTodos([...todos, newTodo])
+    }
+    const delTodo = (todo) => {
+        setTodos(todos.filter((f) => f.id !== todo.id));
+    }
+
+    return (
+        <div className="App">
+            <TodosForm create={createTodo} todos={todos}/>
+            <TodosList del={delTodo} todos={todos} title="Todo list"/>
+        </div>
+    );
 }
 
 export default App;

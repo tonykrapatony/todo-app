@@ -1,0 +1,24 @@
+.myBtn, .myBtn_done, .myBtn_edit, .myBtn_del {
+    border: 1px solid #282069;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+}
+.myBtn {
+    color: #282069;
+    background: transparent;
+}
+.myBtn_done {
+    color: #fff;
+    background-color: #00ff0d;
+}
+.myBtn_edit {
+    color: #fff;
+    background-color: #ffc400;
+}
+.myBtn_del {
+    color: #fff;
+    background-color: #ff0000;
+}

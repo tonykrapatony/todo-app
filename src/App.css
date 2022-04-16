@@ -1,38 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
 .App {
-  text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo_list {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo_item {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border: 1px solid #282069;
+    border-radius: 3px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.done {
+    background-color: #96d899;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoForm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
 }
