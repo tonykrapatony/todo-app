@@ -17,7 +17,10 @@ function App() {
     return (
         <div className="App">
             <TodosForm create={createTodo} todos={todos}/>
-            <TodosList del={delTodo} todos={todos} title="Todo list"/>
+            {todos.length
+                ? <TodosList del={delTodo} todos={todos} title="Todo list"/>
+                : <h2>Todo list is empty</h2>
+            }
         </div>
     );
 }

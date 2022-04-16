@@ -6,7 +6,8 @@
     font-family: 'Roboto', sans-serif;
 }
 .App {
-    width: 500px;
+    max-width: 500px;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -28,6 +29,16 @@
     padding: 10px 15px;
     border: 1px solid #282069;
     border-radius: 3px;
+}
+.todoText {
+    padding: 3px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+.todoBtn {
+    display: flex;
+    align-items: center;
 }
 .done {
     background-color: #96d899;

@@ -11,8 +11,8 @@ export default function TodoItem(props) {
 
     return (
         <div className={cssDone}>
-            <div>{props.todo.body}</div>
-            <div>
+            <div className='todoText'>{props.todo.body}</div>
+            <div className='todoBtn'>
                 <MyButton onClick={toggleDone} className={classes.myBtn_done}>Done</MyButton>
                 {/* <MyButton className={classes.myBtn_edit}>Edit</MyButton> */}
                 <MyButton onClick={() => props.del(props.todo)} className={classes.myBtn_del}>Delete</MyButton>
